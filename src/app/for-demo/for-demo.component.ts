@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NumberService } from '../shared/services/number.service';
 
 @Component({
   selector: 'app-for-demo',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./for-demo.component.scss']
 })
 export class ForDemoComponent {
-
+  
+  numFromService: number;
+  constructor(
+    private numberService: NumberService
+  ) {
+    this.numFromService = this.numberService.numberFromService;
+  }
 }
