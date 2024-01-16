@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ForPracRoutingModule } from './for-prac-routing.module';
 
 
-
 @NgModule({
   declarations: [],
   imports: [
