@@ -5,6 +5,7 @@ import { DevexpressRoutingModule } from './devexpress-routing.module';
 import { DevexpressComponent } from './devexpress.component';
 import { DxDataGridModule, DxTextBoxModule } from 'devextreme-angular';
 import { DxTextBoxDirective } from 'src/app/shared/directives/for-demo/dx-text-box.directive';
+import { TextBoxTemplateComponent } from 'src/app/shared/components/for-demo/text-box-template/text-box-template.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DxTextBoxDirective } from 'src/app/shared/directives/for-demo/dx-text-b
     DevexpressRoutingModule,
     DxTextBoxModule,
     DxTextBoxDirective,
-    DxDataGridModule
+    DxDataGridModule,
+    TextBoxTemplateComponent
   ]
 })
 export class DevexpressModule { }
