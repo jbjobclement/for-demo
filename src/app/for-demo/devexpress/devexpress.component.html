@@ -5,3 +5,12 @@
     >
     </dx-text-box>
 </div>
+<div>
+    <h2>A editcell template for dx-data-grid.</h2>
+    <dx-data-grid
+        [editing]="{ allowUpdating: true, mode: 'popup' }"
+        [columns]="[{ dataField: 'example'}]"
+        [dataSource]="[{example: 'a'}, {example: 'b'}, {example: 'c'}]"
+    >
+    </dx-data-grid>
+</div>
