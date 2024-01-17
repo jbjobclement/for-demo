@@ -7,6 +7,7 @@ import { DxTextBoxComponent } from 'devextreme-angular';
 })
 export class DxTextBoxDirective {
   constructor(
+    // https://js.devexpress.com/Angular/Documentation/22_2/ApiReference/UI_Components/dxTextBox/Configuration/
     private dxTextBox: DxTextBoxComponent
   ) {
     this.dxTextBox.placeholder = 'default placeholder'
