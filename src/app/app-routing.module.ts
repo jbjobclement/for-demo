@@ -7,6 +7,9 @@ const routes: Routes = [
   },
   {
     path: 'for-prac', loadChildren: () => import('./for-prac/for-prac.module').then(m => m.ForPracModule)
+  },
+  {
+    path: 'for-test', loadChildren: () => import('./for-test/for-test.module').then(m => m.ForTestModule)
   }
 ];
 
