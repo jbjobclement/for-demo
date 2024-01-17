@@ -5,9 +5,10 @@ import { ForDemoComponent } from './for-demo.component';
 const routes: Routes = [{ 
     path: '', component: ForDemoComponent,
     children: [
-      { path: 'devexpress', loadChildren: () => import('./devexpress/devexpress.module').then(m => m.DevexpressModule) }
+      { path: 'devexpress', loadChildren: () => import('./devexpress/devexpress.module').then(m => m.DevexpressModule) },
+      { path: 'basic', loadChildren: () => import('./basic/basic.module').then(m => m.BasicModule) }
     ]
-  }
+  },
 ];
 
 @NgModule({
