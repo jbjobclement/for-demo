@@ -1,11 +1,18 @@
 <p>dev-prac works!</p>
 <div>
 
-  <dx-select-box [dataSource]="dataSource" displayExpr="name" label="fruit"
-  ></dx-select-box>
+  <dx-select-box [dataSource]="dataSource" displayExpr="name" label="fruit"></dx-select-box>
 
-  <dx-text-box [(ngModel)]="input" placeholder="Enter a fruit" id="fruit-text" (KeyDown.enter)="addFruit()" valueChangeEvent="keyup"></dx-text-box>
-  <!-- <button (click)="addFruit()">Add Fruit</button> -->
+  <!-- <form> -->
+  <p>Enter a food name</p>
+  <dx-text-box [(ngModel)]="input" placeholder="Enter a fruit" id="fruit-text" valueChangeEvent="keyup"
+    required></dx-text-box>
+  <p>Enter the color of the fruit you entered</p>
+  <dx-text-box [(ngModel)]="color" placeholder="Enter the food's color" id="fruit-text" valueChangeEvent="keyup"
+    required></dx-text-box>
+  <button (click)="addFruit()">Add Fruit</button>
+  <p *ngIf="alert" appAlertPara>Please fill the form</p>
+  <!-- </form> -->
 </div>
 <hr>
 <p>data grid</p>

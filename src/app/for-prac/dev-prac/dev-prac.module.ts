@@ -6,7 +6,7 @@ import { DxSelectBoxModule, DxTextBoxModule } from 'devextreme-angular';
 import { DevExtremeModule } from 'devextreme-angular';
 import { DevPracComponent } from './dev-prac.component';
 import { FormsModule } from '@angular/forms';
-
+import { AlertParaDirective } from 'src/app/shared/directives/alert-para/alert-para.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     DxSelectBoxModule,
     DevExtremeModule,
     DxTextBoxModule,
-    FormsModule
+    FormsModule,
+    AlertParaDirective
   ]
 })
 export class DevPracModule { }
