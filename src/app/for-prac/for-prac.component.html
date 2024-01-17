@@ -1,32 +1,16 @@
-<h1>for-demo works!</h1>
+<h1>for-prac works!</h1>
 <div>
-    <h2>A Number from a service.</h2>
-    <div>
-        {{ num }}
-    </div>
-    <hr>
-</div>
-
-
-<div>
-    <h2>Directive</h2>
-    <h3>Origin Title</h3>
-    <h3
-        appGreenTitle
+    <a
+        [title]="'basic'"
+        routerLink="basic"
     >
-        Modified Title
-    </h3>
-    <hr>
-</div>
-
-<div>
-    <h2>Directive/Service</h2>
-    <h3>
-        Origin content.
-    </h3>
-    <h3
-    appDirectiveWithServicePractice
+        basic
+    </a> |
+    <a
+        [title]="'devexpress'"
+        routerLink="devexpress"
     >
-        Content modified by a directive which contains a service.
-    </h3>
+        devexpress
+    </a>
 </div>
+<router-outlet></router-outlet>

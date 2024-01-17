@@ -1,0 +1,14 @@
+<p>dev-prac works!</p>
+<div>
+
+  <dx-select-box [dataSource]="dataSource" displayExpr="name" label="fruit"
+  ></dx-select-box>
+
+  <dx-text-box [(ngModel)]="input" placeholder="Enter a fruit" id="fruit-text" (KeyDown.enter)="addFruit()" valueChangeEvent="keyup"></dx-text-box>
+  <!-- <button (click)="addFruit()">Add Fruit</button> -->
+</div>
+<hr>
+<p>data grid</p>
+<div>
+  <dx-data-grid [dataSource]="dataSource"></dx-data-grid>
+</div>
