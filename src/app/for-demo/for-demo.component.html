@@ -1,32 +1,49 @@
 <h1>for-demo works!</h1>
 <div>
-    <h2>A Number from a service.</h2>
+    <a
+        [title]="'basic'"
+        routerLink="basic"
+    >
+        basic
+    </a>
+    
+    <a 
+        [title]="'devexpress'"
+        routerLink="devexpress"
+    >
+        devexpress
+    </a>
+</div>
+<router-outlet></router-outlet>
+<div>
     <div>
-        {{ numFromService }}
+        <h2>A Number from a service.</h2>
+        <div>
+            {{ numFromService }}
+        </div>
+        <hr>
     </div>
-    <hr>
-</div>
-
-
-<div>
-    <h2>Directive</h2>
-    <h3>Origin Title</h3>
-    <h3
-        appHeaderModifier
-    >
-        Modified Title
-    </h3>
-    <hr>
-</div>
-
-<div>
-    <h2>Directive/Service</h2>
-    <h3>
-        Origin content.
-    </h3>
-    <h3
-        appDirectiveWithService
-    >
-        Content modified by a directive which contains a service.
-    </h3>
+    
+    <div>
+        <h2>Directive</h2>
+        <h3>Origin Title</h3>
+        <h3
+            appHeaderModifier
+        >
+            Modified Title
+        </h3>
+        <hr>
+    </div>
+    
+    <div>
+        <h2>Directive/Service</h2>
+        <h3>
+            Origin content.
+        </h3>
+        <h3
+            appDirectiveWithService
+        >
+            Content modified by a directive which contains a service.
+        </h3>
+    </div>
 </div>
