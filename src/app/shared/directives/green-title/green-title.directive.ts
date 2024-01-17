@@ -1,7 +1,8 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appGreenTitle]'
+  selector: '[appGreenTitle]',
+  standalone: true
 })
 export class GreenTitleDirective {
 

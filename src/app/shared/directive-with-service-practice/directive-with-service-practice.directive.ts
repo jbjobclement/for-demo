@@ -2,7 +2,8 @@ import { NumberService } from './../services/number.service';
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appDirectiveWithServicePractice]'
+  selector: '[appDirectiveWithServicePractice]',
+  standalone: true
 })
 export class DirectiveWithServicePracticeDirective {
 
