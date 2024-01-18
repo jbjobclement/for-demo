@@ -1,15 +1,19 @@
 <div class="container">
   <div class="navbar">
-    <a
-      [title]="'for-demo'"
-      [routerLink]="['/for-demo']"
-    >
-      for-demo
-    </a>
+    <div class="navbar__item">
+      <a
+        [title]="'for-demo'"
+        [routerLink]="['/for-demo']"
+      >
+        for-demo
+      </a>
+    </div>
+    <div class="navbar__item">
+      <a [routerLink]="['/for-prac']">
+        for-prac
+      </a>
+    </div>
     <br>
-    <a [routerLink]="['/for-prac']">
-    for-prac
-  </a>
   </div>
   <div class="content">
     <router-outlet></router-outlet>
