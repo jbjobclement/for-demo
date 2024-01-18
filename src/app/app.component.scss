@@ -1,14 +1,16 @@
 .container {
     display: flex;
     height: 100%;
-    // padding: 12px;
 }
 
 .navbar {
     padding: 12px;
     border-right: 1px solid black;
+    min-width: 120px;
+    &__item {
+        margin-bottom: 1rem;
+    }
 }
-
 .content { 
     padding: 12px;
 }
