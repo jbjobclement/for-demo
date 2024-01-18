@@ -1,0 +1,35 @@
+<div>
+    <h2>A directive for a DxComponent.</h2>
+    <dx-text-box
+        appDxTextBox
+    >
+    </dx-text-box>
+</div>
+
+
+
+<div>
+    <h2>A editcell template for dx-data-grid.</h2>
+    
+    <a href="https://js.devexpress.com/Angular/Documentation/22_2/ApiReference/UI_Components/dxDataGrid/Configuration/columns/#editCellTemplate">
+       Documentation - editCellTemplate
+    </a>
+    <dx-data-grid
+        [editing]="{ allowUpdating: true, mode: 'popup' }"
+        [columns]="[{ dataField: 'name', editCellTemplate: 'template-example-test' },{ dataField: 'gender', editCellTemplate: 'template-example-test2' }]"
+        [dataSource]="[{name: 'Jhon', gender: 'Male'}, {name: 'Amy', gender: 'Female'}, {name: 'Peter', gender: 'Male'}]"
+    >
+        <app-text-box-template
+            *dxTemplate="let cellInfo of 'template-example-test'"
+            [value]="cellInfo.value"
+            (valueChanged)="cellInfo.setValue($event)"
+        >
+        </app-text-box-template>
+        <app-text-box-template
+            *dxTemplate="let cellInfo of 'template-example-test2'"
+            [value]="cellInfo.value"
+            (valueChanged)="cellInfo.setValue($event)"
+        >
+        </app-text-box-template>
+    </dx-data-grid>
+</div>
