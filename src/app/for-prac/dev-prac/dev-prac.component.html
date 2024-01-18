@@ -20,24 +20,18 @@
   <dx-data-grid
     [dataSource]="dataSource"
     [editing]="{ allowUpdating: true, mode: 'popup'}"
-    [columns]="['name', 'color', {
-      editCellTemplate: 'edit-template'}]"
+    [columns]="[
+      {dataField: 'name',editCellTemplate: 'edit-template'},
+      {dataField: 'color',editCellTemplate: 'edit-template'}
+      ]"
   >
   <div *dxTemplate="let x of 'edit-template'">
     <app-dev-text
-      (click)="test(x.data)"
-      [value]="x.data.name"
-      (valueChanged)="x.data.name = $event"
-      (valueChanged)="test($event)"
-    ></app-dev-text>
-
-    <app-dev-text
       (click)="test(x)"
-      [value]="x.data.color"
-      (valueChanged)="x.data.color = $event"
+      [value]="x.value"
+      (valueChanged)="x.setValue($event)"
       (valueChanged)="test($event)"
     ></app-dev-text>
-
   </div>
 
 
@@ -52,4 +46,3 @@
 
   </dx-data-grid>
 </div>
-
