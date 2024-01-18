@@ -1,7 +1,7 @@
 <p>dev-prac works!</p>
 <div>
 
-  <dx-select-box [dataSource]="dataSource" displayExpr="name" label="fruit"></dx-select-box>
+  <dx-select-box [dataSource]="dataSource" displayExpr="name" label="fruit" appDevDirective></dx-select-box>
 
   <!-- <form> -->
   <p>Enter a food name</p>
@@ -17,5 +17,32 @@
 <hr>
 <p>data grid</p>
 <div>
-  <dx-data-grid [dataSource]="dataSource"></dx-data-grid>
+  <dx-data-grid
+    [dataSource]="dataSource"
+    [editing]="{ allowUpdating: true, mode: 'popup'}"
+    [columns]="[
+      {dataField: 'name',editCellTemplate: 'edit-template'},
+      {dataField: 'color',editCellTemplate: 'edit-template'}
+      ]"
+  >
+  <div *dxTemplate="let x of 'edit-template'">
+    <app-dev-text
+      (click)="test(x)"
+      [value]="x.value"
+      (valueChanged)="x.setValue($event)"
+      (valueChanged)="test($event)"
+    ></app-dev-text>
+  </div>
+
+
+
+  <!-- <app-dev-text
+    *dxTemplate="let x of 'edit-template'"
+    (click)="test(x)"
+    [value]="x.values[1]"
+    (valueChanged)="x.setValue($event)"
+    (valueChanged)="test($event)"
+  ></app-dev-text> -->
+
+  </dx-data-grid>
 </div>

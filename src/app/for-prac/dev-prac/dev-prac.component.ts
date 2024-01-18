@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ValueChangedEvent } from 'devextreme/ui/text_box';
+import { ClickEvent } from 'devextreme/ui/button';
 
 @Component({
   selector: 'app-dev-prac',
@@ -25,5 +27,9 @@ export class DevPracComponent {
     this.input = '';
     this.color = '';
 
+  }
+
+  test(e: any) {
+    console.log(e)
   }
 }
