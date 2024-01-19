@@ -1,1 +1,16 @@
-<p>devexpress-component-control works!</p>
+<h2>Basic Concept for controlling dxComponent</h2>
+<dx-text-box
+    #textBox
+    placeholder="origin placeholder"
+>
+</dx-text-box>
+<dx-button
+    (onClick)="changePlaceHolder()"
+>
+    change placeholder
+</dx-button>
+<dx-button
+    (onClick)="changePlaceHolderByInstance()"
+>
+    change placeholder by controlling instance
+</dx-button>
