@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DevexpressComponentControlRoutingModule } from './devexpress-component-control-routing.module';
 import { DevexpressComponentControlComponent } from './devexpress-component-control.component';
-import { DxButtonModule, DxPopupModule, DxTextBoxModule } from 'devextreme-angular';
+import { DxButtonModule, DxTextBoxModule, DxDataGridModule } from 'devextreme-angular';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { DxButtonModule, DxPopupModule, DxTextBoxModule } from 'devextreme-angul
     CommonModule,
     DevexpressComponentControlRoutingModule,
     DxTextBoxModule,
-    DxButtonModule
+    DxButtonModule,
+    DxDataGridModule
   ]
 })
 export class DevexpressComponentControlModule { }

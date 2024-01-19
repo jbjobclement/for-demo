@@ -1,0 +1,9 @@
+.d-flex {
+    display: flex;
+    > div {
+        flex: 1
+    }
+}
+.data__container {
+    padding-left: 20px;
+}
