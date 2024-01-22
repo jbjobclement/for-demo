@@ -1,0 +1,56 @@
+<p>devexpress-component-control works!</p>
+<h2>Basic Concept for controlling dxComponent</h2>
+<dx-text-box
+    #textBox
+    placeholder="origin placeholder"
+>
+</dx-text-box>
+<dx-button (onClick)="changePlaceHolder()">
+    change placeholder
+</dx-button>
+<dx-button
+    (onClick)="changePlaceHolderByInstance()"
+>
+    change placeholder by controlling instance
+</dx-button>
+<br/>
+<dx-button (onClick)="changeToReadOnly()">
+    change to readonly
+</dx-button>
+<dx-button (onClick)="changeToReadOnlyByInstance()">
+    change to ReadOnly by controlling instance
+</dx-button>
+<dx-button (onClick)="changeReadOnlyToFalse()">
+    Reset
+</dx-button>
+<div>
+    <h2>Retrieve data from a datagrid</h2>
+    <div class="d-flex">
+        <div class="grid__container">
+            <h6>Grid</h6>
+            <dx-data-grid
+                #datagrid
+                [dataSource]="dataSource"
+            >
+            </dx-data-grid>
+            <dx-button (onClick)="retrieveData()">
+                Retrieve Data
+            </dx-button>
+        </div>
+        <div class="data__container">
+            <h3>Data list</h3>
+            <div *ngFor="let item of items">
+                <div *ngIf="item.test <= 30" class="redText">{{ item.test }}</div>
+                <div *ngIf="item.test > 30">{{ item.test }}</div>
+            </div>
+            <!-- <dx-data-grid
+                #datagrid
+                [dataSource]="items"
+            >
+            </dx-data-grid> -->
+            <dx-button (onClick)="reset()">
+                Reset Data
+            </dx-button>
+        </div>
+    </div>
+</div>
