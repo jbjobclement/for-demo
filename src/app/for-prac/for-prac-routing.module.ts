@@ -6,7 +6,8 @@ const routes: Routes = [{
   path: '', component: ForPracComponent,
   children: [
     { path: 'devexpress', loadChildren: () => import('./dev-prac/dev-prac.module').then(m => m.DevPracModule) },
-    { path: 'basic', loadChildren: () => import('./basic/basic.module').then(m => m.BasicModule) }
+    { path: 'basic', loadChildren: () => import('./basic/basic.module').then(m => m.BasicModule) },
+    { path: 'dev-controll', loadChildren: () => import('./dev-controll/dev-controll.module').then(m => m.DevControllModule)}
   ]
 },
 ];

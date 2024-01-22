@@ -1,0 +1,28 @@
+<p>dev-controll works</p>
+<dx-text-box
+  #textBox
+  placeholder="origin placeholder"
+></dx-text-box>
+<dx-button (click)="changePlaceHolder()">Change placehoder</dx-button>
+
+<dx-button
+  (click)="changePlaceHolderByInstance()"
+>
+  Change placeholder by controlling instance
+</dx-button>
+
+<div>
+  <div>
+    <h6>Grid</h6>
+    <dx-data-grid
+    #datagrid
+    [dataSource]="dataSource"
+    ></dx-data-grid>
+    <dx-button (onClick)="retrieveData()">RetriveData</dx-button>
+  </div>
+  <div>
+    <h3>data list </h3>
+    <div *ngFor="let item of items">
+    {{ item.test }}</div>
+  </div>
+</div>
