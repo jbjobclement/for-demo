@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FormCustomizationRoutingModule } from './form-customization-routing.module';
 import { FormCustomizationComponent } from './form-customization.component';
+import { DxFormModule, DxTabsModule } from 'devextreme-angular';
 
 
 @NgModule({
@@ -11,7 +12,10 @@ import { FormCustomizationComponent } from './form-customization.component';
   ],
   imports: [
     CommonModule,
-    FormCustomizationRoutingModule
+    FormCustomizationRoutingModule,
+    DxFormModule,
+    DxTabsModule,
+    // cust
   ]
 })
 export class FormCustomizationModule { }

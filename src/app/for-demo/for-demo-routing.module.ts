@@ -8,7 +8,7 @@ const routes: Routes = [{
       { path: 'devexpress', loadChildren: () => import('./devexpress/devexpress.module').then(m => m.DevexpressModule) },
       { path: 'basic', loadChildren: () => import('./basic/basic.module').then(m => m.BasicModule) },
       { path: 'devexpress-component-control', loadChildren: () => import('./devexpress-component-control/devexpress-component-control.module').then(m => m.DevexpressComponentControlModule) },
-      { path: 'form-customization', loadChildren: () => import('./form-customization/form-customization.module').then(m => m.FormCustomizationModule) },
+      { path: 'form-layout-customization', loadChildren: () => import('./form-customization/form-customization.module').then(m => m.FormCustomizationModule) },
     ]
   }
 ];
