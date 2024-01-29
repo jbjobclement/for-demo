@@ -7,7 +7,10 @@ const routes: Routes = [{
   children: [
     { path: 'devexpress', loadChildren: () => import('./dev-prac/dev-prac.module').then(m => m.DevPracModule) },
     { path: 'basic', loadChildren: () => import('./basic/basic.module').then(m => m.BasicModule) },
-    { path: 'dev-controll', loadChildren: () => import('./dev-controll/dev-controll.module').then(m => m.DevControllModule)}
+    { path: 'dev-controll', loadChildren: () => import('./dev-controll/dev-controll.module').then(m => m.DevControllModule)},
+    {
+      path: 'form', loadChildren: () => import('./form-customization/form-customization.module').then(m => m.FormCustomizationModule)
+    }
   ]
 },
 ];

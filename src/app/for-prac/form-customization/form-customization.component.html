@@ -1,0 +1,33 @@
+<p>form-customiztion works!</p>
+
+<dx-form id="form" [items]="formItems">
+</dx-form>
+
+<br>
+<h2>Form2</h2>
+<dx-form colCount="5">
+  <dxi-item dataField="name" colSpan="5"></dxi-item>
+  <dxi-item dataField="email" colSpan="5" isRequired="true">
+    <dxi-validation-rule type="email"></dxi-validation-rule>
+  </dxi-item>
+  <dxi-item dataField="age" colSpan="2"></dxi-item>
+  <dxi-item itemType="empty"></dxi-item>
+  <dxi-item dataField="gender"></dxi-item>
+  <dxi-item itemType="empty"></dxi-item>
+
+
+
+  <dxi-item itemType="tabbed" caption="Tab Prac" colSpan="5">
+    <dxo-tab-panel-options></dxo-tab-panel-options>
+    <dxi-tab title="left">
+      <dxi-item dataField="left-1"></dxi-item>
+      <dxi-item dataField="left-2"></dxi-item>
+      <dxi-item dataField="left-3"></dxi-item>
+    </dxi-tab>
+    <dxi-tab title="right" colCount="3">
+      <dxi-item dataField="right-1" colSpan="1"></dxi-item>
+      <dxi-item dataField="right-2" colSpan="1"></dxi-item>
+      <dxi-item dataField="right-3" colSpan="1"></dxi-item>
+    </dxi-tab>
+  </dxi-item>
+</dx-form>
