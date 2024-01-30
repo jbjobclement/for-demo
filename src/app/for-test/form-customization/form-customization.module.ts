@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormCustomizationRoutingModule } from './form-customization-routing.module';
 import { FormCustomizationComponent } from './form-customization.component';
 import { DxFormModule, DxTabsModule } from 'devextreme-angular';
+import { DxButtonModule, DxTextBoxModule, DxDataGridModule, DxRadioGroupModule, DxCheckBoxModule } from 'devextreme-angular';
 
 
 @NgModule({
@@ -16,6 +17,11 @@ import { DxFormModule, DxTabsModule } from 'devextreme-angular';
     DxFormModule,
     DxTabsModule,
     // cust
+    DxTextBoxModule,
+    DxButtonModule,
+    DxDataGridModule,
+    DxRadioGroupModule,
+    DxCheckBoxModule,
   ]
 })
 export class FormCustomizationModule { }

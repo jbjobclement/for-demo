@@ -1,1 +1,12 @@
-<p>form-customization works!</p>
+<p>form layout customization</p>
+<dx-form
+    [items]="formItems"
+    (onFieldDataChanged)="onFieldDataChanged($event)"
+>
+</dx-form>
+<div>
+    <span>Name:</span>
+    <div [ngClass]="classNameString">{{ resultName }}</div>
+    <span>Gender:</span>
+    <div [ngClass]="classNameString">{{ resultGender }}</div>
+</div>
