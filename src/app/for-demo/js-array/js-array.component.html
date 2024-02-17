@@ -1,0 +1,29 @@
+<h2>JS array processing and debugging</h2>
+<a href="https://code.visualstudio.com/docs/nodejs/angular-tutorial#_debugging-angular">
+    Debugging Angular
+</a>
+<h2>
+    js array
+</h2>
+Origin: {{arr | json}}
+<div>
+    <h3>map</h3>
+    常用資料結構轉換，如取得新結構: {{newStructure | json}}
+    <hr>
+</div>
+<div>
+    <h3>filter</h3>
+    取得符合條件者
+    <div>
+        > 5 : {{ numbersGreaterThanSix | json }}
+    </div>
+    <hr>
+</div>
+<div>
+    <h3>reduce - 可有其他變化</h3>
+    <div>
+        去除重複: {{ uniqueNumbersArray | json }}
+        取相加(答: 34): {{sum}}
+    </div>
+    <hr>
+</div>
