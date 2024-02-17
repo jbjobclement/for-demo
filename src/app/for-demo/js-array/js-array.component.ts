@@ -5,32 +5,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./js-array.component.scss']
 })
 export class JsArrayComponent {
-  arr = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
+  numbers = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
 
-  newStructure = this.arr.map(n => {
+  newStructure = this.numbers.map(number => {
     return {
-      number: n
+      number: number
     }
   })
   
-  numbersGreaterThanSix = this.arr.filter(n => {
-    if (n > 6) {
+  numbersGreaterThanSix = this.numbers.filter(number => {
+    if (number > 6) {
       return true;
     }
     return false;
   })
 
-  uniqueNumbersArray: number[] = this.numbersGreaterThanSix.reduce((a: number[], c) => {
-    if (a.indexOf(c) === -1) {
+  uniqueNumbersArray: number[] = this.numbersGreaterThanSix.reduce((accumulator: number[], currentValue) => {
+    if (accumulator.indexOf(currentValue) === -1) {
       return [
-        ...a,
-        c
+        ...accumulator,
+        currentValue
       ]
     }
-    return a;
+    return accumulator;
   }, []);
   
-  sum = this.uniqueNumbersArray.reduce((a, c) => {
-    return a + c
+  sum = this.uniqueNumbersArray.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue
   }, 0)
 }
